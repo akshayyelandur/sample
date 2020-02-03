@@ -1,0 +1,63 @@
+<html>
+<head>
+</head>
+<body>
+<style>
+div{
+text-align : center; 
+}
+h1 {
+color:#4c8bf5;
+font-family:"Comic Sans MS", cursive, sans-serif;
+}
+input{
+width : 180px;
+height: 25px;
+}
+
+#b1{
+width : 220px;
+height: 60px;
+}
+
+
+</style>
+<div>
+<img src="https://media1.tenor.com/images/edd9faf7edbf66b1f1ec623b273dde61/tenor.gif?itemid=7834239"="Birthday" height="200" width="250">
+<h1>Please Enter your name below to wish : <i> 'Alka Ramesh'</i> </h1>
+Enter your Name: <input id="birth" type="text"> <br> <br>
+Enter your Msg: <input  id="b1" type="text"> <br> <br>
+<button type="button"  style="position:left" onclick="myFunction()"> Submit</button><br>
+<p id ="demo3" style="color:#fd3a4a" "position:absolute">
+<p id="demo"  style="color:#C845D1" display:block" "font-weight: bold" "position:absolute"></p>
+<p id="demo1"  style="color: #45D161" "position:absolute"> </p>
+</div>
+
+<script>
+function myFunction()
+{
+var temp,msg;
+msg = document.getElementById("demo");
+msg.innerHTML="";
+temp = document.getElementById("birth").value;
+try
+{
+document.getElementById("demo3").innerHTML="<h3>  Thank you </h3>"
+msg.innerHTML= temp.bold() ;
+document.getElementById("demo1").innerHTML =" We will convey your Msg to Alka!"
+
+
+if (!isNaN(temp)) throw "please enter a valid name";
+ 
+
+}
+catch (err)
+{
+msg.innerHTML="Input is not valid : "+ err;
+}
+
+}
+
+</script>
+</body>
+</html>
